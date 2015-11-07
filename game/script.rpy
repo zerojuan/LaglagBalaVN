@@ -177,9 +177,9 @@ label checkpoint:
 
     ofw "Nakow, eto na. Eto na yung nabasa ko."
 
-    ofw "Tangina. Try lang nila."
+    ofw "Tangina. Try lang nila. Sila lalaglagan ko ng bala."
 
-    ofw "Sila lalaglagan ko ng bala."
+    "Sir, pakitanggal po ng sapatos."
 
     ofw ""
 
