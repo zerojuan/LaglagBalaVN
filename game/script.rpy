@@ -36,6 +36,8 @@ define ticketer = Character('Ticketer', color='#CC00CC')
 label start:
     stop music fadeout 3.0
 
+    play music "images/traffic.mp3"
+
     scene bg taxi
     with fade
 
@@ -162,6 +164,8 @@ label check_in:
 
     ofw "Excuse me..."
 
+    play music "images/crowd.mp3"
+
     scene bg pila
     with fade
 
@@ -207,7 +211,11 @@ label check_in:
 
     ticketer "Is this all, Sir?"
 
+    play sound "images/error.mp3"
+
     ticketer "Sir, pakitimbang na lang po ng hand carry niyo, Sir."
+
+    play sound "images/error.mp3"
 
     ticketer "Sorry Sir, pero pwede po ba macheck yung bag niyo"
 
@@ -226,7 +234,8 @@ label check_in:
 
         "Deny":
             $ is_bullet = is_bullet
-            ticketer "Ah ok po Sir. May baggage allowance pa po kayo, baka gusto niyo pong bawasan ang nasa hand carry niyo."
+            ticketer "Ah ok po Sir. May gadgets po ba sa loob o laptop?"
+            ticketer "May baggage allowance pa po kayo, baka gusto niyo pong bawasan ang nasa hand carry niyo."
             ticketer "Baka po kasi mabigatan kayo..."
 
     scene bg pila
@@ -242,7 +251,7 @@ label check_in:
 
 label jollibee:
 
-    play music "images/tu_pars.mp3"
+    play music "images/tu_pars.mp3" fadeout 2.0
 
     scene black
     with dissolve
@@ -302,6 +311,8 @@ label jollibee:
             scene jollibee
             with flash
 
+            "Ayos pre. Salamat!"
+
         "Deny":
             $ is_bullet = is_bullet
 
@@ -333,6 +344,8 @@ label checkpoint:
     show ofw normal at right
     with dissolve
 
+    play sound "images/alarm.mp3"
+
     show security leaning at left
     with easeinright
 
@@ -345,12 +358,18 @@ label checkpoint:
 
     security "Sir, relax lang po. Hindi po kami laglag bala. You have our assurance, tapat po kami sa serbisyo namin."
 
+    play sound "images/alarm.mp3"
+
     show security leaning
     with dissolve
 
-    security "Sir, yung rosary niyo po. Baka may bakal."
+    ofw "Hah? Ano ba?"
+
+    security "Sir, yung rosary niyo po. Baka metal yan."
 
     "..."
+
+    play sound "images/error.mp3"
 
     ofw "... Pero hindi niyo kami masisising mga pasahero ha. Kalat na sa FB yung mga kabulastugan niyo."
 
@@ -380,20 +399,28 @@ label bullet_caught:
     scene bg boy_bullet
     with pixellate
 
+    play sound "images/alarm.mp3"
+
     security "Sir, paki-check po ulit nung bag. Check niyo po, Sir. Baka Sir may nakalimutan po kayong tanggalin. Kutsilyo o gunting."
 
     scene bg boy_bullet
     with pixellate
+
+    play sound "images/alarm.mp3"
 
     security "Sir, di po namin siya hahawakan ok. Sir, paki check po Sir."
 
     scene bg boy_bullet_found
     with pixellate
 
+    play sound "images/alarm.mp3"
+
     security "Sir, parang may nadetect po kami na parang bala sa bag niyo."
 
     scene bg boy_bullet_found
     with pixellate
+
+    play sound "images/alarm.mp3"
 
     security "Sir, di po namin kayo pwedeng payagang makaalis while hindi kayo pumapasa sa security check po namin Sir."
 

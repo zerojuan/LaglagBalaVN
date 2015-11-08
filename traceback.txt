@@ -1,26 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 385, in script
-    with pixelate
-  File "game/script.rpy", line 385, in <module>
-    with pixelate
-NameError: name 'pixelate' is not defined
+IOError: Couldn't find file 'images/alert.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 385, in script
-    with pixelate
-  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\ast.py", line 1251, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\python.py", line 1489, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\python.py", line 1484, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 385, in <module>
-    with pixelate
-NameError: name 'pixelate' is not defined
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in script
+    $ ui.interact()
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\ast.py", line 805, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\python.py", line 1460, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in <module>
+    $ ui.interact()
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\ui.py", line 277, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\display\core.py", line 2354, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\display\core.py", line 2641, in interact_core
+    renpy.audio.audio.interact()
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\audio\audio.py", line 790, in interact
+    periodic()
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\audio\audio.py", line 724, in periodic
+    c.periodic()
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\audio\audio.py", line 340, in periodic
+    topf = load(self.file_prefix + topq.filename + self.file_suffix)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\audio\audio.py", line 74, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\loader.py", line 533, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'images/alert.mp3'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.7.858
