@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 63: choice menuitem expects a non-empty block.
-    "Allow":
-            ^
+File "game/script.rpy", line 37: expected end of line
+    stop music "images/tu_pars.mp3" fadeout 3.0
+               ^
 
 Ren'Py Version: Ren'Py 6.99.7.858

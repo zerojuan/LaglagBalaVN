@@ -1,0 +1,27 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 385, in script
+    with pixelate
+  File "game/script.rpy", line 385, in <module>
+    with pixelate
+NameError: name 'pixelate' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 385, in script
+    with pixelate
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\ast.py", line 1251, in execute
+    trans = renpy.python.py_eval(self.expr)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\python.py", line 1489, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\HP PC\Downloads\renpy-6.99.7-sdk\renpy\python.py", line 1484, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 385, in <module>
+    with pixelate
+NameError: name 'pixelate' is not defined
+
+Windows-8-6.2.9200
+Ren'Py 6.99.7.858
+LaglagBala 0.0
